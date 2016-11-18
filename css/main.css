@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+}
+
+header{
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1479147014836-dda42d84c1a9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=1da0c4f4a02a89bc4cc44ac882049ebc);
+  background-size: cover;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
