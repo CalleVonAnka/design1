@@ -18,7 +18,100 @@ header{
   color: white;
 }
 
-p {
+nav{
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  font-size: 18px;
+
+  padding:0;
+  margin:0;
+  list-style-type:none;
+  display: table;
+  z-index: 3000;
+  display: table-cell;
+  vertical-align: middle;
+  float: right;
+}
+
+.logo{
+  width: 84px;
+  height: 100%;
+  background-image: url("../img/CWK_Papper.png");
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  left:0;
+  margin-left: 10%;
+}
+
+nav ul{
+  display: table-cell;
+  vertical-align: middle;
+  float:right;
+  padding-right: 50px;
+}
+
+nav ul li{
+  display: table-cell;
+  line-height: 60px;
+  padding: 0px 10px;
+  margin: 0px 10px;
+  border-right: 2px white solid;
+}
+
+nav ul a{
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+	font-size: 15px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+nav ul li:last-child{
+  border-right: none;
+}
+
+nav ul li:hover{
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.sect{
+  margin: 0px;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.sOne{
+    background-image: url("../img/first.jpg");
+}
+
+.sTwo{
+    background-image: url("../img/one.jpg");
+}
+
+.sThree{
+    background-image: url("../img/two.jpg");
+}
+
+.sFour{
+    background-image: url("../img/three.jpg");
+}
+
+.sFive{
+    background-image: url("../img/four.jpg");
+}
+
+.subSection{
+  height: 50vh;
+  background-color: rgb(100, 255, 100);
+}
+
+/*p {
   max-width: 600px;
   margin: 0 auto 20px;
-}
+}*/
