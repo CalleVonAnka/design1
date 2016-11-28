@@ -15,7 +15,6 @@ body{
 }
 
 h1 {
-  display: flex;
   color: white;
   text-shadow: 3px 3px grey;
   text-transform: uppercase;
@@ -23,48 +22,31 @@ h1 {
 }
 
 .rgt{
-  background: #ff9e2c;
+  float: right;
+  background-color: rgba(5,5,5,0.5);
 }
 
 .lft{
-  background: #b6701e;
-}
-
-article {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
+  float: left;
+  background-color: rgba(50,50,50,0.8);
 }
 
 div .half{
-  display: inline-block;
-  vertical-align: top;
   width: 50%;
-  padding: 1rem;
+  height: 95%;
+  position: relative;
+  padding: 15px 0 15px 0;
+  margin: 0;
+  display: inline-block;
 }
 
 pre {
-  display: flex;
-  white-space:pre-line;
+  white-space: pre-line;
   font-family: Roboto Condensed, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   max-width: 500px;
 }
-
-/*header{
-  height: 100vh;
-  background-image: url(https://images.unsplash.com/photo-1479147014836-dda42d84c1a9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=1da0c4f4a02a89bc4cc44ac882049ebc);
-  background-size: cover;
-  margin-bottom: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}*/
 
 nav{
   position: fixed;
@@ -82,17 +64,6 @@ nav{
   vertical-align: middle;
   float: right;
 }
-
-/*.logo{
-  width: 84px;
-  height: 100%;
-  background-image: url("../img/CWK_Papper.png");
-  background-size: cover;
-  display: inline-block;
-  vertical-align: middle;
-  left:0;
-  margin-left: 10%;
-}*/
 
 nav .logo {
   position: fixed;
@@ -165,6 +136,8 @@ nav ul li:hover{
 }
 
 .subSection{
+  overflow: hidden;
+  position: relative;
   height: 50vh;
   background: linear-gradient(160deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
@@ -172,4 +145,27 @@ nav ul li:hover{
 /*p {
   max-width: 600px;
   margin: 0 auto 20px;
+}*/
+
+/*.logo{
+  width: 84px;
+  height: 100%;
+  background-image: url("../img/CWK_Papper.png");
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  left:0;
+  margin-left: 10%;
+}*/
+
+/*header{
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1479147014836-dda42d84c1a9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=1da0c4f4a02a89bc4cc44ac882049ebc);
+  background-size: cover;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }*/
