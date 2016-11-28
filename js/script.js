@@ -12,3 +12,8 @@ $(document).ready(function(){
     e.preventDefault();
   });
 });
+
+$(window).scroll(function() {
+  var theta = $(window).scrollTop() / 500 % Math.PI;
+  $('#logo').css({ transform: 'rotate(' + theta + 'rad)' });
+});
