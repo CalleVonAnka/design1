@@ -5,13 +5,13 @@
     <title>Calle</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="js/script.js" type="text/javascript"></script>
   </head>
   <body>
-    <nav>
+    <nav class="animated slideInDown">
       <img class="logo" src="img/snowflake.png" alt id="logo">
-      <!-- <div class="logo" style="float:left;"></div> -->
       <ul>
         <li><a href="#home" class="slide-section">Home</a></li>
         <li><a href="#about" class="slide-section">About</a></li>
@@ -28,7 +28,7 @@
           <h1>About CENTRAL CAFé</h1>
         </div>
       </div>
-      <div class="half rgt">
+      <div class="half rgt animated fadeInRight">
         <pre class="pad">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a posuere libero.
           Sed id diam et enim vehicula interdum sed congue nisl. Cras vehicula pretium nunc quis lacinia.
@@ -45,7 +45,7 @@
     <div class="sect sTwo"></div>
     <div class="subSection" id="enjoy">
       <div class="half lft">
-        <div>
+        <div class="wframe animated fadeInUp">
           <h1>Enjoy something to eat</h1>
           <pre>
             Lorem ipsum dolor sit amet                         <div class="rgt">95:-</div>
@@ -62,7 +62,7 @@
         </div>
       </div>
       <div class="half rgt">
-        <div>
+        <div class="wframe animated fadeInUp">
           <h1>Enjoy something to drink</h1>
           <pre>
             Lorem ipsum dolor sit amet                         <div class="rgt">35:-</div>
@@ -80,10 +80,41 @@
       </div>
     </div>
     <div class="sect sThree"></div>
-    <div class="subSection" id="todays"></div>
+    <div class="subSection" id="todays">
+      <div class="mid">
+        <div class="animated slideInLeft">
+          <h2 class="hWhite">Eggnog for only 79:-</h2>
+          <pre>
+            Ut vitae fermentum nunc, vel ullamcorper ipsum. Vivamus aliquam ultricies risus in tincidunt.
+            Proin dapibus dui ligula, nec tempor dolor mollis quis. Phasellus euismod sem diam, vel hendrerit ex faucibus vitae.
+            Aliquam sit amet fringilla orci, at placerat dolor.
+          </pre>
+        </div>
+        <div class="pad animated slideInRight">
+          <img src="http://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Coffee-PNG/Coffee_Drink_PNG_Clipart_Image.png?m=1440027568" height="400px" width="auto" alt="kaffeDrinkLowPrice">
+        </div>
+      </div>
+    </div>
     <div class="sect sFour"></div>
     <div class="subSection" id="study">
-
+      <div class="mid">
+        <div>
+          <canvas id="myChart" width="400px" height="400px"></canvas>
+        </div>
+        <div>
+          <h2 class="hWhite">Study? No problem. </h2>
+          <pre>
+            Phasellus eu odio id nulla pharetra viverra mattis in sem. Nullam mauris mauris, sollicitudin a cursus eget, congue sed mauris. Nunc risus turpis, pharetra et risus et, pharetra tristique quam. Quisque tortor augue, convallis ut rutrum vel, feugiat nec augue. Ut massa elit, congue quis risus ut, fermentum dapibus ante. Praesent posuere sapien tellus, eget auctor lorem condimentum eget. Integer ac odio sodales, elementum lacus a, viverra dolor. Proin vehicula auctor felis, quis varius leo tristique vitae. Maecenas aliquet pretium ex. Morbi id mauris non enim varius ultricies id eu leo. Pellentesque tristique risus sapien. Sed at congue nisl, ut sodales massa.
+          </pre>
+        </div>
+        <div>
+          <h2 class="hWhite">We got that covered.</h2>
+          <pre class="pad">
+            Ut vitae fermentum nunc, vel ullamcorper ipsum. Vivamus aliquam ultricies risus in tincidunt. Proin dapibus dui ligula, nec tempor dolor mollis quis. Phasellus euismod sem diam, vel hendrerit ex faucibus vitae. Aliquam sit amet fringilla orci, at placerat dolor. Proin gravida malesuada neque, at convallis ligula egestas quis. Pellentesque blandit, odio non aliquet eleifend, nisl nisi suscipit libero, et lacinia sapien augue ut sem. Fusce elementum sed risus et pulvinar. Ut tincidunt risus lacus, id congue erat posuere eu. Proin velit elit, porttitor eu malesuada sit amet, gravida vel odio. Fusce eu scelerisque ligula. Sed maximus ut ligula in porta.
+          </pre>
+          <div id="spacer1"></div>
+        </div>
+      </div>
     </div>
     <div class="sect sFive"></div>
     <div class="subSection" id="findus"></div>

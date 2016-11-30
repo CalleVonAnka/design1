@@ -22,11 +22,13 @@ h1 {
   font-weight: 600;
 }
 
-.rgt{
-  float: right;
+.hWhite{
+  color:white;
+  font-size:50px;
+  font-weight:bold;
 }
 
-.lft{
+.rgt, .lft{
   float: left;
 }
 
@@ -161,6 +163,31 @@ div #bild1{
   position: relative;
   height: 70vh;
   background: linear-gradient(160deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+div .wframe {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 10px double white;
+  border-radius: 5px;
+  padding: 3em;
+}
+
+div .mid{
+  display: flex;
+  height: 100%;
+  margin-left: 33%;
+  width: 33%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+div .mid > div{
+  flex: 1;
+}
+
+#spacer1{
+  height: 30px;
 }
 
 div #wrapper{
