@@ -6,7 +6,9 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <!-- TODO: Gör så animationen startar via scrollning på sidan -->
     <script src="js/script.js" type="text/javascript"></script>
   </head>
   <body>
@@ -28,7 +30,7 @@
           <h1>About CENTRAL CAFé</h1>
         </div>
       </div>
-      <div class="half rgt animated fadeInRight">
+      <div id="a1" class="half rgt animated">
         <pre class="pad">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a posuere libero.
           Sed id diam et enim vehicula interdum sed congue nisl. Cras vehicula pretium nunc quis lacinia.
@@ -40,12 +42,14 @@
           Praesent nec fringilla ligula. Sed at augue et ex vestibulum volutpat.
           Duis semper nisi vitae quam fringilla, quis accumsan lacus vestibulum. Fusce nec mollis dolor.
         </pre>
+
+        <!-- TODO: Lägg in en knapp som vänder blad på höger sida -->
       </div>
     </div>
     <div class="sect sTwo"></div>
     <div class="subSection" id="enjoy">
       <div class="half lft">
-        <div class="wframe animated fadeInUp">
+        <div class="wframe a2 animated">
           <h1>Enjoy something to eat</h1>
           <pre>
             Lorem ipsum dolor sit amet                         <div class="rgt">95:-</div>
@@ -62,7 +66,7 @@
         </div>
       </div>
       <div class="half rgt">
-        <div class="wframe animated fadeInUp">
+        <div class="wframe a2 animated">
           <h1>Enjoy something to drink</h1>
           <pre>
             Lorem ipsum dolor sit amet                         <div class="rgt">35:-</div>
@@ -82,7 +86,7 @@
     <div class="sect sThree"></div>
     <div class="subSection" id="todays">
       <div class="mid">
-        <div class="animated slideInLeft">
+        <div class="a3 animated">
           <h2 class="hWhite">Eggnog for only 79:-</h2>
           <pre>
             Ut vitae fermentum nunc, vel ullamcorper ipsum. Vivamus aliquam ultricies risus in tincidunt.
@@ -90,7 +94,7 @@
             Aliquam sit amet fringilla orci, at placerat dolor.
           </pre>
         </div>
-        <div class="pad animated slideInRight">
+        <div class="pad a4 animated">
           <img src="http://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Coffee-PNG/Coffee_Drink_PNG_Clipart_Image.png?m=1440027568" height="400px" width="auto" alt="kaffeDrinkLowPrice">
         </div>
       </div>
@@ -101,7 +105,7 @@
         <div>
           <canvas id="myChart" width="400px" height="400px"></canvas>
         </div>
-        <div>
+        <div class="pad">
           <h2 class="hWhite">Study? No problem. </h2>
           <pre>
             Phasellus eu odio id nulla pharetra viverra mattis in sem. Nullam mauris mauris, sollicitudin a cursus eget, congue sed mauris. Nunc risus turpis, pharetra et risus et, pharetra tristique quam. Quisque tortor augue, convallis ut rutrum vel, feugiat nec augue. Ut massa elit, congue quis risus ut, fermentum dapibus ante. Praesent posuere sapien tellus, eget auctor lorem condimentum eget. Integer ac odio sodales, elementum lacus a, viverra dolor. Proin vehicula auctor felis, quis varius leo tristique vitae. Maecenas aliquet pretium ex. Morbi id mauris non enim varius ultricies id eu leo. Pellentesque tristique risus sapien. Sed at congue nisl, ut sodales massa.
@@ -117,6 +121,57 @@
       </div>
     </div>
     <div class="sect sFive"></div>
-    <div class="subSection" id="findus"></div>
+    <div class="subSection" id="findus">
+      <!-- TODO: Visa någon typ av karta över central park, ha mörk bakgrund, "connect with us" fb, ig, linkdin, twitter, pintrst logos som har den blåa bakgrundsfärgen för att "skina" igenom den mörka, kanske subfooter -->
+      <div id="spacegrey">
+        <div class="mid">
+          <div>
+            <div id="map"></div>
+            <script>
+              function initMap() {
+                var uluru = {lat: -25.363, lng: 131.044};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 15,
+                  center: {lat: 40.774811, lng: -73.978748}
+                });
+              }
+            </script>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6WrlUk24R6AMPs_A_T6bowRihis68JO4&callback=initMap">
+            </script>
+          </div>
+          <div class="pad"></div>
+          <div class="pad">
+            <div id="adress">
+              <p>Find us here</p>
+              <pre>
+                EAST VILLAGE
+                35 THIRD AVENUE
+                (BETWEEN 68TH 70TH W STREET)
+                111.222.3333
+                Phone # +1 000-000-0000
+              </pre>
+            </div>
+            <div id="sLogos">
+              <p>Connect with us</p>
+              <div>
+                <div class="rund"><img src="img/ig.png" alt="insta"></div>
+                <div class="rund" id="fb"><img src="img/fb.png" alt="face"></div>
+                <div class="rund" style="margin-right:0px;"><img src="img/tweet.png" alt="twitter"></div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+      <div id="btm">
+        <p>
+          Healthy fast-indie coffée house, crafted with </p> <div id="hrt">♥</div><p> in central New York
+        </p>
+        <pre style="color:rgba(0,0,0,0.4); margin:0 auto; ">
+          Podio id lorem ulla pharetra viverra mattis in sem. Nullam mauris mauri.
+        </pre>
+      </div>
+    </div>
   </body>
 </html>

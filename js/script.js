@@ -5,12 +5,107 @@ $(document).ready(function(){
     //gets the clicked attribute
     var linkHref = $(this).attr('href');
 
+    //nav scroll
     $('html, body').animate({
       scrollTop: $(linkHref).offset().top - headerHeight
     }, 1000);
 
     e.preventDefault();
   });
+
+  //animations
+  // hide our element on page load
+  $('#a1').css('opacity', 0);
+  $('.a2').css('opacity', 0);
+  $('.a3').css('opacity', 0);
+  $('.a4').css('opacity', 0);
+
+  $('#a1').waypoint(function() {
+      $('#a1').addClass('fadeInRight');
+  }, { offset: '50%' });
+
+  $('.a2').waypoint(function() {
+      $('.a2').addClass('fadeInUp');
+  }, { offset: '70%' });
+
+  $('.a3').waypoint(function() {
+      $('.a3').addClass('fadeInLeft');
+  }, { offset: '50%' });
+
+  $('.a4').waypoint(function() {
+      $('.a4').addClass('fadeInRight');
+  }, { offset: '50%' });
+
+  //end of animations
+
+  // Chart page study
+  var ctx = document.getElementById("myChart");
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"],
+      datasets: [{
+        label: ' ',
+        data: [0, 1, 3, 10, 8, 5, 1.5, 1, 2, 3, 4, 5, 0],
+        backgroundColor: [
+          'rgba(255, 255, 255, 0.2)',
+          'rgba(255, 255, 255, 0.2)',
+          'rgba(255, 255, 255, 0.2)',
+          'rgba(255, 255, 255, 0.2)',
+          'rgba(255, 255, 255, 0.2)',
+          'rgba(255, 255, 255, 0.2)',
+          'rgba(255, 255, 255, 0.2)',
+          'rgba(255, 255, 255, 0.2)',
+          'rgba(255, 255, 255, 0.2)',
+          'rgba(255, 255, 255, 0.2)',
+          'rgba(255, 255, 255, 0.2)',
+          'rgba(255, 255, 255, 0.2)',
+        ],
+        borderColor: [
+          'rgba(255,255,255,1)',
+          'rgba(255,255,255,1)',
+          'rgba(255,255,255,1)',
+          'rgba(255,255,255,1)',
+          'rgba(255,255,255,1)',
+          'rgba(255,255,255,1)',
+          'rgba(255,255,255,1)',
+          'rgba(255,255,255,1)',
+          'rgba(255,255,255,1)',
+          'rgba(255,255,255,1)',
+          'rgba(255,255,255,1)',
+          'rgba(255,255,255,1)',
+          'rgba(255,255,255,1)',
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      hover: {
+        // Overrides the global setting
+        mode: 'index',
+        intersect: false
+      },
+      legend: {
+        display: false
+      },
+      title: {
+        display: true,
+        text: 'Background noise at different hours'
+      },
+      scales: {
+        xAxes: [{
+          display: true,
+          barPercentage: 1.1
+        }],
+        yAxes: [{
+          display: false,
+          ticks: {beginAtZero:true}
+        }]
+      }
+    }
+  });
+
+// end of doc ready
 });
 
 // scrolls the logo in nav bar
@@ -20,10 +115,10 @@ $(window).scroll(function() {
 });
 
 // Chart page study
-var canvas = document.getElementById('myChart');
+var canvas = document.getElementById("demo");
 
 var data = {
-  labels: ["10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
+  labels: ["09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"],
   datasets: [
     {
       label: "Background noise at different hours",

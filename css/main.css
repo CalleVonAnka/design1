@@ -43,6 +43,7 @@ div .half{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .pad {
@@ -139,23 +140,23 @@ div #bild1{
 }
 
 .sOne{
-    background-image: url("../img/first.jpg");
+  background-image: url("../img/first.jpg");
 }
 
 .sTwo{
-    background-image: url("../img/one.jpg");
+  background-image: url("../img/one.jpg");
 }
 
 .sThree{
-    background-image: url("../img/two.jpg");
+  background-image: url("../img/two.jpg");
 }
 
 .sFour{
-    background-image: url("../img/three.jpg");
+  background-image: url("../img/three.jpg");
 }
 
 .sFive{
-    background-image: url("../img/four.jpg");
+  background-image: url("../img/four.jpg");
 }
 
 .subSection{
@@ -213,10 +214,89 @@ div #wrapper{
   transform: rotate(-15deg);
 }
 
-/*p {
-  max-width: 600px;
-  margin: 0 auto 20px;
+#spacegrey{
+  height: 75%;
+  width: auto;
+  background-color: #343838;
+  box-shadow: 0px 0px 20px 0px #222;
+}
+
+#btm{
+  position: relative;
+  height: 25%;
+  width: 690px;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+
+#hrt{
+  display: inline;
+  font-size: 30pt;
+  color: rgb(200, 0, 0);
+}
+
+p {
+  display: inline;
+  color: white;
+  font-size: 16pt;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#adress{
+  padding-bottom: 2em;
+}
+
+#adress pre{
+  font-weight: 400;
+  color: rgba(255,255,255,0.3);
+}
+
+#sLogos{
+  min-width: 178px;
+  max-width: 178px;
+}
+
+.rund{
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(160deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  box-shadow: 2px 2px 2px black;
+}
+
+div.rund:hover{
+  background: rgba(44, 181, 232, 0.7);
+}
+
+/*.round:last-child{
+  margin-right: 0px;
 }*/
+
+.rund img{
+  display: block;
+  height: 50%;
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 12.5px;
+  filter: invert(100%);
+}
+
+#fb img{
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 0;
+}
+
+#map {
+  height: 400px;
+  width: 40vw;
+}
 
 /*.logo{
   width: 84px;
