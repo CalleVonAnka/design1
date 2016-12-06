@@ -105,7 +105,7 @@ nav ul li:hover{
 .subSection{
   overflow: hidden;
   position: relative;
-  height: 50vh;
+  height: 70vh;
   background: linear-gradient(160deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
 
@@ -171,7 +171,6 @@ div #bild1{
 div .arrow{
   display: inline-block;
   vertical-align: middle;
-  position: absolute;
   margin-left: 40%;
   cursor:pointer;
 }
@@ -340,7 +339,7 @@ div.rund:hover{
 }
 
 #map {
-  height: 30vh;
+  height: 40vh;
   width: 40vw;
 }
 
